@@ -1,0 +1,41 @@
+// configure database
+
+CREATE DATABASE pizzaria_paraiso;
+CREATE USER brendon WITH PASSWORD '1234';
+GRANT ALL PRIVILEGES ON DATABASE pizzaria TO brendon;
+
+
+CREATE TABLE DETALHEPIZZA (
+    id_detalhes INTEGER PRIMARY KEY,
+    tamanhoPizza CHAR,
+    qtd_pizza INTEGER,
+    preco FLOAT,
+    data_pedido TIMESTAMP
+);
+
+
+
+CREATE TABLE PIZZA (
+    id_pizza INTEGER PRIMARY KEY,
+    qtd_ingredientes CHAR,
+    id_detalhes INTEGER
+);
+ 
+ALTER TABLE PIZZA ADD CONSTRAINT FK_PIZZA_2
+    FOREIGN KEY (id_detalhes???)
+    REFERENCES PIZZA (???);
+
+
+
+
+
+CREATE TABLE INGREDIENTES (
+    massa CHAR,
+    recheio CHAR,
+    AutoID INTEGER PRIMARY KEY,
+    id_pizza INTEGER
+);
+ 
+ALTER TABLE INGREDIENTES ADD CONSTRAINT FK_INGREDIENTES_1
+    FOREIGN KEY (ingrendientes???, id_pizza???, id_pizza???)
+    REFERENCES ??? (???);
