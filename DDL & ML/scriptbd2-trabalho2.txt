@@ -22,8 +22,8 @@ CREATE TABLE PIZZA (
 );
  
 ALTER TABLE PIZZA ADD CONSTRAINT FK_PIZZA_2
-    FOREIGN KEY (id_detalhes???)
-    REFERENCES PIZZA (???);
+    FOREIGN KEY (id_detalhes)
+    REFERENCES DETALHEPIZZA (id_detalhes);
 
 
 
@@ -37,5 +37,5 @@ CREATE TABLE INGREDIENTES (
 );
  
 ALTER TABLE INGREDIENTES ADD CONSTRAINT FK_INGREDIENTES_1
-    FOREIGN KEY (ingrendientes???, id_pizza???, id_pizza???)
-    REFERENCES ??? (???);
+    FOREIGN KEY (id_pizza)
+    REFERENCES PIZZA (id_pizza);
